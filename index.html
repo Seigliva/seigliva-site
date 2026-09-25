@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Seigliva — en enkel personlig nettside om smart hjem, homelab og små prosjekter." />
+    <meta name="theme-color" content="#101827" />
+    <meta property="og:title" content="Seigliva" />
+    <meta property="og:description" content="Smart hjem, homelab og litt diverse." />
+    <meta property="og:type" content="website" />
+    <title>Seigliva</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Til toppen">
+        <span class="brand-mark">S</span>
+        <span>Seigliva</span>
+      </a>
+      <nav class="nav" aria-label="Hovedmeny">
+        <a href="#smart-hjem">Smart hjem</a>
+        <a href="#prosjekter">Prosjekter</a>
+        <a href="#om">Om</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero section">
+        <div class="hero-copy">
+          <p class="eyebrow">Personlig side · smart hjem · homelab</p>
+          <h1>Hei, dette er Seigliva.</h1>
+          <p class="lead">
+            En liten nettside for å samle ting jeg liker å bygge, teste og forbedre — fra
+            smarthus og automasjoner til små digitale prosjekter.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#prosjekter">Se prosjekter</a>
+            <a class="button secondary" href="#om">Les kort om siden</a>
+          </div>
+        </div>
+        <div class="hero-card" aria-label="Statuskort for siden">
+          <div class="status-dot"></div>
+          <p class="card-label">Status</p>
+          <h2>Første versjon er live</h2>
+          <p>Enkel, rask og klar for videre bygging med GitHub og Cloudflare Pages.</p>
+        </div>
+      </section>
+
+      <section class="section split" id="smart-hjem">
+        <div>
+          <p class="eyebrow">Smart hjem</p>
+          <h2>Automatisering uten for mye styr.</h2>
+        </div>
+        <p>
+          Her kan det etter hvert komme korte notater om Home Assistant, smarte rutiner,
+          dashboard-idéer, energibruk, lys, sensorer og andre små forbedringer i hverdagen.
+        </p>
+      </section>
+
+      <section class="section cards" id="prosjekter" aria-labelledby="prosjekter-title">
+        <div class="section-heading">
+          <p class="eyebrow">Diverse</p>
+          <h2 id="prosjekter-title">Ting som kan få plass her</h2>
+        </div>
+        <article class="card">
+          <span class="icon">🏠</span>
+          <h3>Smart hjem</h3>
+          <p>Automasjoner, sensorer, dashboards og små grep som gjør huset litt smartere.</p>
+        </article>
+        <article class="card">
+          <span class="icon">🧰</span>
+          <h3>Homelab</h3>
+          <p>Containere, tjenester, backup, overvåking og ryddige måter å holde ting stabilt.</p>
+        </article>
+        <article class="card">
+          <span class="icon">✍️</span>
+          <h3>Notater</h3>
+          <p>Korte skriverier, nyttige lenker, små erfaringer og ting som er verdt å huske.</p>
+        </article>
+      </section>
+
+      <section class="section about" id="om">
+        <div class="about-panel">
+          <p class="eyebrow">Om siden</p>
+          <h2>Et rolig startpunkt.</h2>
+          <p>
+            Dette er bare første utgave: ingen tung plattform, ingen database og ingen
+            komplisert drift. Bare en lett statisk side som kan forbedres litt og litt.
+          </p>
+          <ul class="check-list">
+            <li>Hostes gratis på Cloudflare Pages</li>
+            <li>Kildekode kan ligge på GitHub</li>
+            <li>Enkel å endre senere</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="year"></span> Seigliva</p>
+      <a href="#top">Til toppen ↑</a>
+    </footer>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
