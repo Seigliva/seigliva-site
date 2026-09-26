@@ -3,102 +3,156 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Seigliva — en enkel personlig nettside om smart hjem, homelab og små prosjekter." />
-    <meta name="theme-color" content="#101827" />
-    <meta property="og:title" content="Seigliva" />
-    <meta property="og:description" content="Smart hjem, homelab og litt diverse." />
+    <meta name="description" content="Seigliva bygger små, praktiske ting for smart hjem, homelab og rolige automasjoner." />
+    <meta name="theme-color" content="#080b12" />
+    <meta property="og:title" content="Seigliva — smart hjem, homelab og små verktøy" />
+    <meta property="og:description" content="Home Assistant, Omarchy, blueprints og ryddige homelab-prosjekter." />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://uroh.one/" />
+    <link rel="canonical" href="https://uroh.one/" />
     <title>Seigliva</title>
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="assets/styles.css" />
   </head>
   <body>
+    <div class="grain" aria-hidden="true"></div>
     <header class="site-header">
       <a class="brand" href="#top" aria-label="Til toppen">
         <span class="brand-mark">S</span>
         <span>Seigliva</span>
       </a>
       <nav class="nav" aria-label="Hovedmeny">
-        <a href="#smart-hjem">Smart hjem</a>
         <a href="#prosjekter">Prosjekter</a>
-        <a href="#om">Om</a>
+        <a href="#blueprints">Blueprints</a>
+        <a href="#stack">Stack</a>
       </nav>
     </header>
 
     <main id="top">
       <section class="hero section">
         <div class="hero-copy">
-          <p class="eyebrow">Personlig side · smart hjem · homelab</p>
-          <h1>Hei, dette er Seigliva.</h1>
+          <p class="eyebrow">IT i hjemmet · smooth drift · litt show-off</p>
+          <h1>Små ting som får hjemmet til å føles smartere.</h1>
           <p class="lead">
-            En liten nettside for å samle ting jeg liker å bygge, teste og forbedre — fra
-            smarthus og automasjoner til små digitale prosjekter.
+            Jeg bygger og deler praktiske Home Assistant-oppsett, homelab-notater og små verktøy
+            som gjør hverdagen litt mer automatisk — uten at alt må bli et evighetsprosjekt.
           </p>
           <div class="hero-actions">
-            <a class="button primary" href="#prosjekter">Se prosjekter</a>
-            <a class="button secondary" href="#om">Les kort om siden</a>
+            <a class="button primary" href="#prosjekter">Se hva som bygges</a>
+            <a class="button secondary" href="https://github.com/Seigliva" rel="me">GitHub</a>
           </div>
         </div>
-        <div class="hero-card" aria-label="Statuskort for siden">
-          <div class="status-dot"></div>
-          <p class="card-label">Status</p>
-          <h2>Første versjon er live</h2>
-          <p>Enkel, rask og klar for videre bygging med GitHub og Cloudflare Pages.</p>
-        </div>
+
+        <aside class="console-card" aria-label="Prosjektstatus">
+          <div class="console-topline">
+            <span class="traffic red"></span>
+            <span class="traffic yellow"></span>
+            <span class="traffic green"></span>
+            <span class="console-title">home/status</span>
+          </div>
+          <div class="console-body">
+            <p><span>site</span><strong>uroh.one</strong></p>
+            <p><span>deploy</span><strong>Cloudflare Pages</strong></p>
+            <p><span>source</span><strong>GitHub / main</strong></p>
+            <p><span>vibe</span><strong>rolig, nerdy, nyttig</strong></p>
+          </div>
+        </aside>
       </section>
 
-      <section class="section split" id="smart-hjem">
-        <div>
-          <p class="eyebrow">Smart hjem</p>
-          <h2>Automatisering uten for mye styr.</h2>
-        </div>
+      <section class="section intro" aria-label="Kort introduksjon">
         <p>
-          Her kan det etter hvert komme korte notater om Home Assistant, smarte rutiner,
-          dashboard-idéer, energibruk, lys, sensorer og andre små forbedringer i hverdagen.
+          ITih betyr <strong>IT i hjemmet</strong>. Litt E.T. phone home, litt Home Assistant,
+          litt “kan dette automatiseres uten at det blir stygt?”. Denne siden er startpunktet.
         </p>
       </section>
 
-      <section class="section cards" id="prosjekter" aria-labelledby="prosjekter-title">
+      <section class="section projects" id="prosjekter" aria-labelledby="prosjekter-title">
         <div class="section-heading">
-          <p class="eyebrow">Diverse</p>
-          <h2 id="prosjekter-title">Ting som kan få plass her</h2>
+          <p class="eyebrow">Prosjekter</p>
+          <h2 id="prosjekter-title">Ting som allerede finnes på GitHub.</h2>
         </div>
-        <article class="card">
-          <span class="icon">🏠</span>
-          <h3>Smart hjem</h3>
-          <p>Automasjoner, sensorer, dashboards og små grep som gjør huset litt smartere.</p>
+
+        <article class="feature-card featured">
+          <div class="feature-icon image-icon"><img src="assets/ha-watch.svg" alt="" /></div>
+          <div>
+            <p class="tag">Omarchy plugin</p>
+            <h3>Home Assistant Watch</h3>
+            <p>
+              En liten Omarchy-plugin som viser kamera-preview eller tekstvarsler på skrivebordet
+              når noe skjer hjemme. Logger inn mot Home Assistant, lar deg velge sensorer og holder
+              previewen lett tilgjengelig uten å stjele fokus.
+            </p>
+            <a class="text-link" href="https://github.com/Seigliva/omarchy-ha-watch">Åpne repo →</a>
+          </div>
         </article>
-        <article class="card">
-          <span class="icon">🧰</span>
-          <h3>Homelab</h3>
-          <p>Containere, tjenester, backup, overvåking og ryddige måter å holde ting stabilt.</p>
-        </article>
-        <article class="card">
-          <span class="icon">✍️</span>
-          <h3>Notater</h3>
-          <p>Korte skriverier, nyttige lenker, små erfaringer og ting som er verdt å huske.</p>
-        </article>
+
+        <div class="card-grid">
+          <article class="feature-card">
+            <div class="feature-icon">🏠</div>
+            <p class="tag">Showcase</p>
+            <h3>ITih / Home Assistant Homelab</h3>
+            <p>Ryddede automasjoner, dashboards, notater og mønstre fra et faktisk smart hjem og homelab.</p>
+            <a class="text-link" href="https://github.com/Seigliva/home-assistant-homelab-showcase">Se showcase →</a>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">🧠</div>
+            <p class="tag">AI hjemme</p>
+            <h3>Lokale AI-rutiner</h3>
+            <p>Små AI-grep for dashboards, morgenrutiner og varsler — laget for å være nyttig, ikke masete.</p>
+            <a class="text-link" href="#blueprints">Se blueprintene →</a>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">🛠️</div>
+            <p class="tag">Homelab</p>
+            <h3>Drift uten drama</h3>
+            <p>Docker, Unraid, Proxmox, overvåking og automasjoner som helst skal passe seg selv.</p>
+            <a class="text-link" href="https://github.com/Seigliva/home-assistant-homelab-showcase/tree/main/automations">Se automasjoner →</a>
+          </article>
+        </div>
       </section>
 
-      <section class="section about" id="om">
-        <div class="about-panel">
-          <p class="eyebrow">Om siden</p>
-          <h2>Et rolig startpunkt.</h2>
-          <p>
-            Dette er bare første utgave: ingen tung plattform, ingen database og ingen
-            komplisert drift. Bare en lett statisk side som kan forbedres litt og litt.
-          </p>
-          <ul class="check-list">
-            <li>Hostes gratis på Cloudflare Pages</li>
-            <li>Kildekode kan ligge på GitHub</li>
-            <li>Enkel å endre senere</li>
-          </ul>
+      <section class="section blueprints" id="blueprints" aria-labelledby="blueprints-title">
+        <div class="section-heading compact">
+          <p class="eyebrow">Home Assistant blueprints</p>
+          <h2 id="blueprints-title">Kopierbare mønstre for ekte hverdagsting.</h2>
         </div>
+
+        <div class="blueprint-list">
+          <a class="blueprint" href="https://github.com/Seigliva/home-assistant-homelab-showcase/blob/main/blueprints/automation/ai-greeting-generator.yaml">
+            <span class="blueprint-number">01</span>
+            <span>
+              <strong>AI Greeting Generator</strong>
+              <em>Korte AI-hilsener til dashboards, wall tablets og morgenrutiner.</em>
+            </span>
+          </a>
+          <a class="blueprint" href="https://github.com/Seigliva/home-assistant-homelab-showcase/blob/main/blueprints/automation/robot-mower-weather-gated.yaml">
+            <span class="blueprint-number">02</span>
+            <span>
+              <strong>Robot mower weather-gated</strong>
+              <em>Kjører robotklipperen annenhver dag, men stopper når været sier nei.</em>
+            </span>
+          </a>
+        </div>
+      </section>
+
+      <section class="section stack" id="stack" aria-labelledby="stack-title">
+        <div>
+          <p class="eyebrow">Stack</p>
+          <h2 id="stack-title">Lett, statisk og lett å endre.</h2>
+        </div>
+        <ul class="stack-list">
+          <li>HTML og CSS uten byggesteg</li>
+          <li>GitHub som kilde</li>
+          <li>Cloudflare Pages på uroh.one</li>
+          <li>Små iterasjoner fremfor stor redesign-maraton</li>
+        </ul>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>© <span id="year"></span> Seigliva</p>
+      <p>© <span id="year"></span> Seigliva · bygget litt og litt</p>
       <a href="#top">Til toppen ↑</a>
     </footer>
 
