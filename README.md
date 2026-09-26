@@ -1,31 +1,34 @@
 # Seigliva
 
-En enkel personlig statisk nettside laget for GitHub + Cloudflare Pages.
+En enkel personlig nettside for `uroh.one`.
 
-## Filer
+Siden er laget som en liten startside for smart hjem, homelab, små prosjekter og diverse notater. Den inneholder foreløpig en enkel forside med seksjoner for smart hjem, prosjekter og litt kort info om siden.
 
-- `index.html` — selve siden
-- `assets/styles.css` — styling
-- `assets/favicon.svg` — enkelt ikon
-- `_headers` — anbefalte sikkerhetsheadere for Cloudflare Pages
+## Status
 
-## Lokal testing
+- Publisert med Cloudflare Pages
+- Kildekode ligger på GitHub
+- Hoveddomene: <https://uroh.one>
+- `www.uroh.one` videresendes til `uroh.one`
 
-```bash
-python3 -m http.server 8788
+## Innhold
+
+```text
+index.html              # Forsiden
+assets/styles.css       # Styling
+assets/favicon.svg      # Enkel S-logo/favicon
+404.html                # Enkel 404-side
+_headers                # Cloudflare Pages-headere
 ```
 
-Åpne deretter <http://localhost:8788>.
+## Teknisk
 
-## Publisering med Cloudflare Pages
+Dette er en statisk HTML/CSS-side uten byggesteg. Cloudflare Pages publiserer direkte fra `main`-branchen.
 
-1. Opprett et GitHub-repo, f.eks. `seigliva-site`.
-2. Push disse filene til repoet.
-3. I Cloudflare: **Workers & Pages → Create application → Pages**.
-4. Koble til GitHub-repoet.
-5. Build settings:
-   - Framework preset: `None`
-   - Build command: la stå tom
-   - Build output directory: `/`
-6. Legg til custom domain, f.eks. `dittdomene.no` og `www.dittdomene.no`.
+Build-oppsett i Cloudflare Pages:
 
+```text
+Framework preset: None
+Build command: tom
+Build output directory: /
+```
